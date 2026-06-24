@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BeLight Pro Communitas programs — Social Protection, Education, WASH, and Livelihood initiatives in Ethiopia." />
+  <title>Programs — BeLight Pro Communitas</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#F5A623',
+              dark:   '#1A1A1A',
+              light:  '#FFF8EE',
+              muted:  '#6B6B6B',
+            }
+          },
+          fontFamily: {
+            heading: ['Georgia', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Georgia&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-body text-brand-dark bg-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-heading font-bold text-brand-yellow">BeLight</a>
+      <ul class="hidden md:flex gap-8 text-sm font-medium text-brand-dark">
+        <li><a href="index.html" class="hover:text-brand-yellow transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-brand-yellow transition">About</a></li>
+        <li><a href="programs.html" class="text-brand-yellow">Programs</a></li>
+        <li><a href="team.html" class="hover:text-brand-yellow transition">Team</a></li>
+        <li><a href="gallery.html" class="hover:text-brand-yellow transition">Gallery</a></li>
+        <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+      </ul>
+      <a href="donate.html" class="hidden md:inline-block bg-brand-yellow text-white text-sm font-semibold px-5 py-2 rounded-full hover:opacity-90 transition">Donate</a>
+      <button id="menu-toggle" class="md:hidden text-brand-dark focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand-yellow">Home</a>
+      <a href="about.html" class="hover:text-brand-yellow">About</a>
+      <a href="programs.html" class="text-brand-yellow">Programs</a>
+      <a href="team.html" class="hover:text-brand-yellow">Team</a>
+      <a href="gallery.html" class="hover:text-brand-yellow">Gallery</a>
+      <a href="contact.html" class="hover:text-brand-yellow">Contact</a>
+      <a href="donate.html" class="bg-brand-yellow text-white px-5 py-2 rounded-full text-center">Donate</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="bg-brand-light py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
+      <h1 class="font-heading text-4xl md:text-5xl text-brand-dark max-w-2xl leading-tight">Our Programs</h1>
+      <p class="text-brand-muted text-lg mt-6 max-w-2xl">We deliver tangible and sustainable change across four priority areas that address the most urgent needs in urban and rural Ethiopia.</p>
+    </div>
+  </section>
+
+  <!-- PROGRAM 1 — SOCIAL PROTECTION -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="inline-block bg-brand-yellow text-white text-xs font-semibold px-4 py-1 rounded-full mb-5">Program 01</span>
+        <h2 class="font-heading text-3xl text-brand-dark mb-5">Social Protection & Support</h2>
+        <p class="text-brand-muted text-lg leading-relaxed mb-5">
+          We provide holistic support to single mothers, widows, and children — including economic empowerment, skills training, psychosocial support, and essential resources — to help the most vulnerable break the cycle of poverty and secure a dignified, self-reliant future.
+        </p>
+        <ul class="space-y-3 text-brand-muted text-sm">
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Economic empowerment for low-income single mothers in urban areas</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Psychosocial support and mental health resources</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Essential resource distribution for children and families</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Community-based networks and peer support systems</li>
+        </ul>
+      </div>
+      <div class="bg-brand-light rounded-2xl h-80 flex items-center justify-center">
+        <p class="text-brand-muted text-sm">Program image coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM 2 — EDUCATION -->
+  <section class="py-20 bg-brand-light">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div class="bg-white rounded-2xl h-80 flex items-center justify-center order-2 md:order-1">
+        <p class="text-brand-muted text-sm">Program image coming soon</p>
+      </div>
+      <div class="order-1 md:order-2">
+        <span class="inline-block bg-brand-yellow text-white text-xs font-semibold px-4 py-1 rounded-full mb-5">Program 02</span>
+        <h2 class="font-heading text-3xl text-brand-dark mb-5">Education Facility Development</h2>
+        <p class="text-brand-muted text-lg leading-relaxed mb-5">
+          We build and renovate school facilities in rural communities to create safe, inspiring learning environments where children can thrive, dream big, and unlock their full potential — regardless of where they were born.
+        </p>
+        <ul class="space-y-3 text-brand-muted text-sm">
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Construction and renovation of rural school buildings</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Safe and inclusive learning environments for disadvantaged children</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Sanitation and hygiene facilities within schools</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Educational support and materials for underserved communities</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM 3 — WASH -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="inline-block bg-brand-yellow text-white text-xs font-semibold px-4 py-1 rounded-full mb-5">Program 03</span>
+        <h2 class="font-heading text-3xl text-brand-dark mb-5">WASH — Water, Sanitation & Hygiene</h2>
+        <p class="text-brand-muted text-lg leading-relaxed mb-5">
+          We bring reliable access to safe drinking water to underserved rural communities — reducing disease, saving time, removing unnecessary burdens especially for women and girls, and improving the overall well-being and productivity of entire communities.
+        </p>
+        <ul class="space-y-3 text-brand-muted text-sm">
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Climate-resilient clean water infrastructure</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Sanitation facilities and hygiene promotion</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Community ownership and sustainability training</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Environmental protection and water source management</li>
+        </ul>
+      </div>
+      <div class="bg-brand-light rounded-2xl h-80 flex items-center justify-center">
+        <p class="text-brand-muted text-sm">Program image coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAM 4 — LIVELIHOOD -->
+  <section class="py-20 bg-brand-light">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div class="bg-white rounded-2xl h-80 flex items-center justify-center order-2 md:order-1">
+        <p class="text-brand-muted text-sm">Program image coming soon</p>
+      </div>
+      <div class="order-1 md:order-2">
+        <span class="inline-block bg-brand-yellow text-white text-xs font-semibold px-4 py-1 rounded-full mb-5">Program 04</span>
+        <h2 class="font-heading text-3xl text-brand-dark mb-5">Livelihood & Economic Empowerment</h2>
+        <p class="text-brand-muted text-lg leading-relaxed mb-5">
+          We promote sustainable livelihoods through skills development, income-generating activities, and community-driven initiatives — building household and community resilience and helping families achieve lasting financial independence.
+        </p>
+        <ul class="space-y-3 text-brand-muted text-sm">
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Vocational and skills training programs</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Micro-enterprise and income-generating activities</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Savings groups and financial literacy</li>
+          <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold mt-0.5">→</span> Market linkages and community-driven economic initiatives</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-brand-yellow py-20 text-white text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="font-heading text-3xl md:text-4xl mb-4">Support a program today</h2>
+      <p class="text-white/80 text-lg mb-8">Your donation directly funds one of these programs and changes lives on the ground in Ethiopia.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="donate.html" class="bg-white text-brand-yellow font-bold px-8 py-4 rounded-full hover:bg-brand-light transition">Donate Now</a>
+        <a href="contact.html" class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-brand-yellow transition">Partner With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="text-white font-heading font-bold text-lg mb-2">BeLight Pro Communitas</p>
+        <p class="text-sm leading-relaxed">To be light for the community — a source of hope and positive transformation in Ethiopia.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Quick Links</p>
+        <ul class="text-sm space-y-2">
+          <li><a href="about.html" class="hover:text-brand-yellow transition">About Us</a></li>
+          <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+          <li><a href="team.html" class="hover:text-brand-yellow transition">Team</a></li>
+          <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-brand-yellow transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Contact</p>
+        <ul class="text-sm space-y-2">
+          <li>belightpcngo@gmail.com</li>
+          <li>+251 913 734 566</li>
+          <li>+251 703 405 247</li>
+          <li class="pt-2">
+            <a href="https://www.linkedin.com/company/belight-pro-communitas" target="_blank" rel="noopener" class="hover:text-brand-yellow transition">LinkedIn →</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-700 text-xs text-center">
+      © 2024 BeLight Pro Communitas. Registered under ACSO, Proclamation No. 1113/2019.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
