@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About BeLight Pro Communitas — our mission, vision, values, and story." />
+  <title>About Us — BeLight Pro Communitas</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#F5A623',
+              dark:   '#1A1A1A',
+              light:  '#FFF8EE',
+              muted:  '#6B6B6B',
+            }
+          },
+          fontFamily: {
+            heading: ['Georgia', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Georgia&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-body text-brand-dark bg-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-heading font-bold text-brand-yellow">BeLight</a>
+      <ul class="hidden md:flex gap-8 text-sm font-medium text-brand-dark">
+        <li><a href="index.html" class="hover:text-brand-yellow transition">Home</a></li>
+        <li><a href="about.html" class="text-brand-yellow">About</a></li>
+        <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+        <li><a href="team.html" class="hover:text-brand-yellow transition">Our Team</a></li>
+        <li><a href="gallery.html" class="hover:text-brand-yellow transition">Gallery</a></li>
+        <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+      </ul>
+      <a href="donate.html" class="hidden md:inline-block bg-brand-yellow text-white text-sm font-semibold px-5 py-2 rounded-full hover:opacity-90 transition">Donate</a>
+      <button id="menu-toggle" class="md:hidden text-brand-dark focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand-yellow">Home</a>
+      <a href="about.html" class="text-brand-yellow">About</a>
+      <a href="programs.html" class="hover:text-brand-yellow">Programs</a>
+      <a href="team.html" class="hover:text-brand-yellow">Our Team</a>
+      <a href="gallery.html" class="hover:text-brand-yellow">Gallery</a>
+      <a href="contact.html" class="hover:text-brand-yellow">Contact</a>
+      <a href="donate.html" class="bg-brand-yellow text-white px-5 py-2 rounded-full text-center">Donate</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="bg-brand-light py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-3">Who We Are</p>
+      <h1 class="font-heading text-4xl md:text-5xl text-brand-dark max-w-2xl leading-tight">
+        To be light for the community
+      </h1>
+    </div>
+  </section>
+
+  <!-- ABOUT INTRO -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="text-brand-muted text-lg leading-relaxed mb-6">
+          <strong class="text-brand-dark">BeLight Pro Communitas (BPC)</strong> is a local non-governmental organization established in 2024 and registered under the FDRE Authority for Civil Society Organizations (ACSO).
+        </p>
+        <p class="text-brand-muted text-lg leading-relaxed mb-6">
+          Founded by young, passionate, and socially responsible Ethiopians, BPC was born out of a profound desire to create meaningful and lasting change in their community. Their shared vision of an equitable society led to the formation of the organization.
+        </p>
+        <p class="text-brand-muted text-lg leading-relaxed">
+          Rooted in compassion and faith-based commitment, BPC strives to empower vulnerable communities — especially disadvantaged women and children — through community-based interventions that address immediate needs while fostering long-term resilience, dignity, and self-reliance.
+        </p>
+      </div>
+      <div class="bg-brand-light rounded-2xl h-80 flex items-center justify-center">
+        <p class="text-brand-muted text-sm">Image coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="bg-brand-dark text-white py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+      <div>
+        <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-4">Our Vision</p>
+        <p class="font-heading text-2xl leading-relaxed">
+          Foster a future where underprivileged individuals and communities are equipped with the resources and opportunities needed to build sustainable and dignified lives.
+        </p>
+      </div>
+      <div>
+        <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-4">Our Mission</p>
+        <p class="font-heading text-2xl leading-relaxed">
+          To enhance the well-being and resilience of deprived communities through inclusive development initiatives in WASH, Education, Livelihood, and social support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-2">What Drives Us</p>
+      <h2 class="font-heading text-3xl text-brand-dark mb-12">Our Core Values</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="border border-gray-100 rounded-2xl p-7 hover:shadow-md transition">
+          <h3 class="font-semibold text-brand-dark mb-2">Faith-Based Commitment</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">We are driven by faith principles to serve those in greatest need, bringing light where there is darkness.</p>
+        </div>
+
+        <div class="border border-gray-100 rounded-2xl p-7 hover:shadow-md transition">
+          <h3 class="font-semibold text-brand-dark mb-2">Compassion & Service</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">We operate with empathy and deep respect for all beneficiaries, honoring the dignity of every person we serve.</p>
+        </div>
+
+        <div class="border border-gray-100 rounded-2xl p-7 hover:shadow-md transition">
+          <h3 class="font-semibold text-brand-dark mb-2">Community-Centered</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">We recognize and empower communities as active agents and leaders in their own change — not passive recipients.</p>
+        </div>
+
+        <div class="border border-gray-100 rounded-2xl p-7 hover:shadow-md transition">
+          <h3 class="font-semibold text-brand-dark mb-2">Collaboration & Partnership</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">We work together with others on shared values to maximize impact and reach more communities effectively.</p>
+        </div>
+
+        <div class="border border-gray-100 rounded-2xl p-7 hover:shadow-md transition">
+          <h3 class="font-semibold text-brand-dark mb-2">Sustainability</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">We ensure long-term, continuous mission fulfillment — building systems that outlast our direct involvement.</p>
+        </div>
+
+        <div class="border border-gray-100 rounded-2xl p-7 hover:shadow-md transition">
+          <h3 class="font-semibold text-brand-dark mb-2">Transparency & Accountability</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">We uphold the highest standards of ethical conduct, financial integrity, and zero tolerance for fraud or exploitation.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET AREAS -->
+  <section class="bg-brand-light py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-2">Where We Work</p>
+      <h2 class="font-heading text-3xl text-brand-dark mb-4">Target Areas</h2>
+      <p class="text-brand-muted text-lg mb-10 max-w-2xl">In its initial phase, BPC concentrates its interventions in selected priority areas, with a focus on communities affected by conflict, displacement, and socio-economic vulnerability.</p>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-white border border-brand-yellow text-brand-dark text-sm font-medium px-5 py-2 rounded-full">Addis Ababa</span>
+        <span class="bg-white border border-brand-yellow text-brand-dark text-sm font-medium px-5 py-2 rounded-full">Oromia</span>
+        <span class="bg-white border border-brand-yellow text-brand-dark text-sm font-medium px-5 py-2 rounded-full">Afar</span>
+        <span class="bg-white border border-brand-yellow text-brand-dark text-sm font-medium px-5 py-2 rounded-full">Amhara</span>
+        <span class="bg-white border border-brand-yellow text-brand-dark text-sm font-medium px-5 py-2 rounded-full">South Ethiopia</span>
+        <span class="bg-white border border-brand-yellow text-brand-dark text-sm font-medium px-5 py-2 rounded-full">Central Ethiopia</span>
+        <span class="bg-white border border-brand-yellow text-brand-dark text-sm font-medium px-5 py-2 rounded-full">Sidama</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION -->
+  <section class="py-12 bg-white border-t border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 text-center text-brand-muted text-sm">
+      Officially registered under the FDRE Authority for Civil Society Organizations (ACSO) on <strong>September 12, 2024</strong>, under Civil Society Organizations Proclamation No. <strong>1113/2019</strong>.
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-brand-yellow py-20 text-white text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="font-heading text-3xl md:text-4xl mb-4">Join us in making a difference</h2>
+      <p class="text-white/80 text-lg mb-8">Your partnership — through donations, grants, or expertise — directly ignites hope and builds lasting community impact.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="donate.html" class="bg-white text-brand-yellow font-bold px-8 py-4 rounded-full hover:bg-brand-light transition">Donate Today</a>
+        <a href="contact.html" class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-brand-yellow transition">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="text-white font-heading font-bold text-lg mb-2">BeLight Pro Communitas</p>
+        <p class="text-sm leading-relaxed">To be light for the community — a source of hope and positive transformation in Ethiopia.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Quick Links</p>
+        <ul class="text-sm space-y-2">
+          <li><a href="about.html" class="hover:text-brand-yellow transition">About Us</a></li>
+          <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+          <li><a href="team.html" class="hover:text-brand-yellow transition">Our Team</a></li>
+          <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-brand-yellow transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Contact</p>
+        <ul class="text-sm space-y-2">
+          <li>belightpcngo@gmail.com</li>
+          <li>+251 913 734 566</li>
+          <li>+251 703 405 247</li>
+          <li class="pt-2">
+            <a href="https://www.linkedin.com/company/belight-pro-communitas" target="_blank" rel="noopener" class="hover:text-brand-yellow transition">LinkedIn →</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-700 text-xs text-center">
+      © 2024 BeLight Pro Communitas. Registered under ACSO, Proclamation No. 1113/2019.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
