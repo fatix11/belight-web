@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BeLight Pro Communitas — Empowering vulnerable communities in Ethiopia through WASH, Education, Livelihood, and Social Support." />
+  <title>BeLight Pro Communitas</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow:  '#F5A623',
+              dark:    '#1A1A1A',
+              light:   '#FFF8EE',
+              muted:   '#6B6B6B',
+            }
+          },
+          fontFamily: {
+            heading: ['Georgia', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Georgia&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-body text-brand-dark bg-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-heading font-bold text-brand-yellow">
+        BeLight
+      </a>
+      <ul class="hidden md:flex gap-8 text-sm font-medium text-brand-dark">
+        <li><a href="index.html" class="hover:text-brand-yellow transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-brand-yellow transition">About</a></li>
+        <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+        <li><a href="team.html" class="hover:text-brand-yellow transition">Our Team</a></li>
+        <li><a href="gallery.html" class="hover:text-brand-yellow transition">Gallery</a></li>
+        <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+      </ul>
+      <a href="donate.html" class="hidden md:inline-block bg-brand-yellow text-white text-sm font-semibold px-5 py-2 rounded-full hover:opacity-90 transition">
+        Donate
+      </a>
+      <!-- Mobile menu button -->
+      <button id="menu-toggle" class="md:hidden text-brand-dark focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand-yellow">Home</a>
+      <a href="about.html" class="hover:text-brand-yellow">About</a>
+      <a href="programs.html" class="hover:text-brand-yellow">Programs</a>
+      <a href="team.html" class="hover:text-brand-yellow">Our Team</a>
+      <a href="gallery.html" class="hover:text-brand-yellow">Gallery</a>
+      <a href="contact.html" class="hover:text-brand-yellow">Contact</a>
+      <a href="donate.html" class="bg-brand-yellow text-white px-5 py-2 rounded-full text-center">Donate</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-brand-light min-h-[90vh] flex items-center">
+    <div class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-3">Non-Profit · Ethiopia</p>
+        <h1 class="font-heading text-4xl md:text-5xl leading-tight text-brand-dark mb-6">
+          Turning Despair into Dignity
+        </h1>
+        <p class="text-brand-muted text-lg leading-relaxed mb-8">
+          BeLight Pro Communitas empowers vulnerable women, children, and communities across Ethiopia through WASH, Education, Livelihood, and Social Support programs.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="donate.html" class="bg-brand-yellow text-white font-semibold px-7 py-3 rounded-full hover:opacity-90 transition">
+            Support Us
+          </a>
+          <a href="about.html" class="border border-brand-dark text-brand-dark font-semibold px-7 py-3 rounded-full hover:bg-brand-dark hover:text-white transition">
+            Learn More
+          </a>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-lg bg-brand-yellow h-80 flex items-center justify-center">
+        <p class="text-white text-sm opacity-70">Hero image coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT NUMBERS -->
+  <section class="bg-brand-dark text-white py-16">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <p class="text-brand-yellow text-4xl font-heading font-bold">4</p>
+        <p class="text-sm mt-2 text-gray-300">Focus Areas</p>
+      </div>
+      <div>
+        <p class="text-brand-yellow text-4xl font-heading font-bold">7</p>
+        <p class="text-sm mt-2 text-gray-300">Target Regions</p>
+      </div>
+      <div>
+        <p class="text-brand-yellow text-4xl font-heading font-bold">2024</p>
+        <p class="text-sm mt-2 text-gray-300">Year Founded</p>
+      </div>
+      <div>
+        <p class="text-brand-yellow text-4xl font-heading font-bold">∞</p>
+        <p class="text-sm mt-2 text-gray-300">Hope Given</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS OVERVIEW -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-2">What We Do</p>
+      <h2 class="font-heading text-3xl text-brand-dark mb-12">Our Core Programs</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-brand-light rounded-2xl p-6 hover:shadow-md transition">
+          <div class="w-10 h-10 bg-brand-yellow rounded-full mb-4"></div>
+          <h3 class="font-semibold text-brand-dark mb-2">Social Protection</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">Holistic support for single mothers, widows, and children to restore dignity and self-reliance.</p>
+        </div>
+
+        <div class="bg-brand-light rounded-2xl p-6 hover:shadow-md transition">
+          <div class="w-10 h-10 bg-brand-yellow rounded-full mb-4"></div>
+          <h3 class="font-semibold text-brand-dark mb-2">Education</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">Building and renovating school facilities in rural areas to create safe learning environments.</p>
+        </div>
+
+        <div class="bg-brand-light rounded-2xl p-6 hover:shadow-md transition">
+          <div class="w-10 h-10 bg-brand-yellow rounded-full mb-4"></div>
+          <h3 class="font-semibold text-brand-dark mb-2">WASH</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">Delivering clean water, sanitation, and hygiene services to underserved rural communities.</p>
+        </div>
+
+        <div class="bg-brand-light rounded-2xl p-6 hover:shadow-md transition">
+          <div class="w-10 h-10 bg-brand-yellow rounded-full mb-4"></div>
+          <h3 class="font-semibold text-brand-dark mb-2">Livelihood</h3>
+          <p class="text-brand-muted text-sm leading-relaxed">Skills training and income-generating activities that build household and community resilience.</p>
+        </div>
+
+      </div>
+      <div class="mt-10">
+        <a href="programs.html" class="text-brand-yellow font-semibold hover:underline">View all programs →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="bg-brand-yellow py-20 text-white text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="font-heading text-3xl md:text-4xl mb-4">Your support changes lives</h2>
+      <p class="text-white/80 text-lg mb-8">Every contribution directly reaches the most vulnerable communities in Ethiopia.</p>
+      <a href="donate.html" class="bg-white text-brand-yellow font-bold px-8 py-4 rounded-full hover:bg-brand-light transition">
+        Donate Today
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="text-white font-heading font-bold text-lg mb-2">BeLight Pro Communitas</p>
+        <p class="text-sm leading-relaxed">To be light for the community — a source of hope and positive transformation in Ethiopia.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Quick Links</p>
+        <ul class="text-sm space-y-2">
+          <li><a href="about.html" class="hover:text-brand-yellow transition">About Us</a></li>
+          <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+          <li><a href="team.html" class="hover:text-brand-yellow transition">Our Team</a></li>
+          <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-brand-yellow transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Contact</p>
+        <ul class="text-sm space-y-2">
+          <li>belightpcngo@gmail.com</li>
+          <li>+251 913 734 566</li>
+          <li>+251 703 405 247</li>
+          <li class="pt-2">
+            <a href="https://www.linkedin.com/company/belight-pro-communitas" target="_blank" rel="noopener" class="hover:text-brand-yellow transition">LinkedIn →</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-700 text-xs text-center">
+      © 2024 BeLight Pro Communitas. Registered under ACSO, Proclamation No. 1113/2019.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
