@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Donate to BeLight Pro Communitas — support vulnerable communities in Ethiopia through WASH, Education, Livelihood, and Social Protection programs." />
+  <title>Donate — BeLight Pro Communitas</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#F5A623',
+              dark:   '#1A1A1A',
+              light:  '#FFF8EE',
+              muted:  '#6B6B6B',
+            }
+          },
+          fontFamily: {
+            heading: ['Georgia', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Georgia&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-body text-brand-dark bg-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-heading font-bold text-brand-yellow">BeLight</a>
+      <ul class="hidden md:flex gap-8 text-sm font-medium text-brand-dark">
+        <li><a href="index.html" class="hover:text-brand-yellow transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-brand-yellow transition">About</a></li>
+        <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+        <li><a href="team.html" class="hover:text-brand-yellow transition">Team</a></li>
+        <li><a href="gallery.html" class="hover:text-brand-yellow transition">Gallery</a></li>
+        <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+      </ul>
+      <a href="donate.html" class="hidden md:inline-block bg-brand-yellow text-white text-sm font-semibold px-5 py-2 rounded-full hover:opacity-90 transition">Donate</a>
+      <button id="menu-toggle" class="md:hidden text-brand-dark focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand-yellow">Home</a>
+      <a href="about.html" class="hover:text-brand-yellow">About</a>
+      <a href="programs.html" class="hover:text-brand-yellow">Programs</a>
+      <a href="team.html" class="hover:text-brand-yellow">Team</a>
+      <a href="gallery.html" class="hover:text-brand-yellow">Gallery</a>
+      <a href="contact.html" class="hover:text-brand-yellow">Contact</a>
+      <a href="donate.html" class="bg-brand-yellow text-white px-5 py-2 rounded-full text-center">Donate</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="bg-brand-light py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-3">Make a Difference</p>
+      <h1 class="font-heading text-4xl md:text-5xl text-brand-dark max-w-2xl leading-tight">Your generosity changes lives</h1>
+      <p class="text-brand-muted text-lg mt-6 max-w-xl">Every contribution — large or small — directly reaches the most vulnerable communities in Ethiopia. 100% of donations go to our programs.</p>
+    </div>
+  </section>
+
+  <!-- IMPACT STRIP -->
+  <section class="bg-brand-dark text-white py-12">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-brand-yellow text-2xl font-heading font-bold">$25</p>
+        <p class="text-gray-300 text-sm mt-1">Provides hygiene kits for a family</p>
+      </div>
+      <div>
+        <p class="text-brand-yellow text-2xl font-heading font-bold">$50</p>
+        <p class="text-gray-300 text-sm mt-1">Funds skills training for a mother</p>
+      </div>
+      <div>
+        <p class="text-brand-yellow text-2xl font-heading font-bold">$100</p>
+        <p class="text-gray-300 text-sm mt-1">Supports a child's education for a term</p>
+      </div>
+      <div>
+        <p class="text-brand-yellow text-2xl font-heading font-bold">$500</p>
+        <p class="text-gray-300 text-sm mt-1">Helps build a clean water point</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATION FORM -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
+
+      <!-- FORM -->
+      <div>
+        <h2 class="font-heading text-2xl text-brand-dark mb-8">Choose your contribution</h2>
+
+        <!-- AMOUNT SELECTOR -->
+        <div class="mb-6">
+          <p class="text-sm font-medium text-brand-dark mb-3">Donation amount</p>
+          <div class="grid grid-cols-4 gap-3 mb-3" id="amount-buttons">
+            <button onclick="selectAmount(25)" class="amount-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold hover:border-brand-yellow transition">$25</button>
+            <button onclick="selectAmount(50)" class="amount-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold hover:border-brand-yellow transition">$50</button>
+            <button onclick="selectAmount(100)" class="amount-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold hover:border-brand-yellow transition">$100</button>
+            <button onclick="selectAmount(500)" class="amount-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold hover:border-brand-yellow transition">$500</button>
+          </div>
+          <input type="number" id="custom-amount" placeholder="Or enter a custom amount ($)"
+            class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-yellow transition"
+            oninput="clearAmountButtons()" />
+        </div>
+
+        <!-- FREQUENCY -->
+        <div class="mb-6">
+          <p class="text-sm font-medium text-brand-dark mb-3">Frequency</p>
+          <div class="flex gap-3">
+            <button id="freq-once" onclick="setFreq('once')" class="flex-1 border-2 border-brand-yellow bg-brand-yellow text-white rounded-xl py-3 text-sm font-semibold transition">One-time</button>
+            <button id="freq-monthly" onclick="setFreq('monthly')" class="flex-1 border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold hover:border-brand-yellow transition">Monthly</button>
+          </div>
+        </div>
+
+        <!-- DONOR INFO -->
+        <div class="space-y-4 mb-6">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-brand-dark mb-2">First Name <span class="text-brand-yellow">*</span></label>
+              <input type="text" id="first-name" placeholder="First name" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-yellow transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-brand-dark mb-2">Last Name <span class="text-brand-yellow">*</span></label>
+              <input type="text" id="last-name" placeholder="Last name" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-yellow transition" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-brand-dark mb-2">Email Address <span class="text-brand-yellow">*</span></label>
+            <input type="email" id="donor-email" placeholder="your@email.com" class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-yellow transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-brand-dark mb-2">Dedicate this donation <span class="text-gray-400 font-normal">(optional)</span></label>
+            <input type="text" id="dedication" placeholder="In honour / memory of..." class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-yellow transition" />
+          </div>
+        </div>
+
+        <!-- PROGRAM SELECTOR -->
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-brand-dark mb-2">Direct your gift to <span class="text-gray-400 font-normal">(optional)</span></label>
+          <select class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-yellow transition bg-white">
+            <option value="">Where it's needed most</option>
+            <option value="social">Social Protection & Support</option>
+            <option value="education">Education Facility Development</option>
+            <option value="wash">WASH — Water, Sanitation & Hygiene</option>
+            <option value="livelihood">Livelihood & Economic Empowerment</option>
+          </select>
+        </div>
+
+        <div id="donate-error" class="hidden text-red-500 text-sm mb-4"></div>
+        <div id="donate-success" class="hidden bg-brand-light text-brand-dark text-sm rounded-xl px-4 py-3 mb-4">
+          Thank you for your generosity! We will be in touch shortly to complete your donation.
+        </div>
+
+        <button onclick="submitDonation()" class="w-full bg-brand-yellow text-white font-semibold py-4 rounded-full hover:opacity-90 transition text-base">
+          Proceed to Donate
+        </button>
+        <p class="text-center text-brand-muted text-xs mt-4">Your information is secure. We will contact you to complete the payment process.</p>
+      </div>
+
+      <!-- WHY DONATE -->
+      <div class="space-y-8">
+        <div>
+          <h2 class="font-heading text-2xl text-brand-dark mb-6">Why give to BeLight?</h2>
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-brand-dark text-sm mb-1">100% reaches programs</p>
+                <p class="text-brand-muted text-sm leading-relaxed">Every dollar you give goes directly to our community programs. We maintain strict financial controls and publish annual reports.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-brand-dark text-sm mb-1">Community-led impact</p>
+                <p class="text-brand-muted text-sm leading-relaxed">We work alongside communities, not for them. Your donation empowers people to lead their own change.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-brand-dark text-sm mb-1">Transparent reporting</p>
+                <p class="text-brand-muted text-sm leading-relaxed">Registered under ACSO with annual audits. You will receive a report on how your donation was used.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-5 h-5 text-brand-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-brand-dark text-sm mb-1">Faith-driven accountability</p>
+                <p class="text-brand-muted text-sm leading-relaxed">Our work is grounded in faith-based commitment. We treat every donation as a sacred trust.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OTHER WAYS TO GIVE -->
+        <div class="bg-brand-light rounded-2xl p-7">
+          <h3 class="font-semibold text-brand-dark mb-4">Other ways to support</h3>
+          <ul class="space-y-3 text-sm text-brand-muted">
+            <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold">→</span> <span><strong class="text-brand-dark">Bank transfer</strong> — contact us at <a href="mailto:belightpcngo@gmail.com" class="text-brand-yellow hover:underline">belightpcngo@gmail.com</a> for wire transfer details</span></li>
+            <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold">→</span> <span><strong class="text-brand-dark">Grant funding</strong> — we welcome institutional donors and grant partnerships</span></li>
+            <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold">→</span> <span><strong class="text-brand-dark">In-kind donations</strong> — materials, equipment, or professional services</span></li>
+            <li class="flex items-start gap-3"><span class="text-brand-yellow font-bold">→</span> <span><strong class="text-brand-dark">Spread the word</strong> — share our mission with your network</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="text-white font-heading font-bold text-lg mb-2">BeLight Pro Communitas</p>
+        <p class="text-sm leading-relaxed">To be light for the community — a source of hope and positive transformation in Ethiopia.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Quick Links</p>
+        <ul class="text-sm space-y-2">
+          <li><a href="about.html" class="hover:text-brand-yellow transition">About Us</a></li>
+          <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+          <li><a href="team.html" class="hover:text-brand-yellow transition">Team</a></li>
+          <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-brand-yellow transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Contact</p>
+        <ul class="text-sm space-y-2">
+          <li>belightpcngo@gmail.com</li>
+          <li>+251 913 734 566</li>
+          <li>+251 703 405 247</li>
+          <li class="pt-2">
+            <a href="https://www.linkedin.com/company/belight-pro-communitas" target="_blank" rel="noopener" class="hover:text-brand-yellow transition">LinkedIn →</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-700 text-xs text-center">
+      © 2024 BeLight Pro Communitas. Registered under ACSO, Proclamation No. 1113/2019.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    let selectedAmount = null;
+    let selectedFreq = 'once';
+
+    function selectAmount(val) {
+      selectedAmount = val;
+      document.getElementById('custom-amount').value = '';
+      document.querySelectorAll('.amount-btn').forEach(b => {
+        b.classList.remove('border-brand-yellow', 'bg-brand-yellow', 'text-white');
+        b.classList.add('border-gray-200');
+      });
+      event.target.classList.add('border-brand-yellow', 'bg-brand-yellow', 'text-white');
+      event.target.classList.remove('border-gray-200');
+    }
+
+    function clearAmountButtons() {
+      selectedAmount = null;
+      document.querySelectorAll('.amount-btn').forEach(b => {
+        b.classList.remove('border-brand-yellow', 'bg-brand-yellow', 'text-white');
+        b.classList.add('border-gray-200');
+      });
+    }
+
+    function setFreq(freq) {
+      selectedFreq = freq;
+      const once = document.getElementById('freq-once');
+      const monthly = document.getElementById('freq-monthly');
+      if (freq === 'once') {
+        once.classList.add('border-brand-yellow', 'bg-brand-yellow', 'text-white');
+        once.classList.remove('border-gray-200');
+        monthly.classList.remove('border-brand-yellow', 'bg-brand-yellow', 'text-white');
+        monthly.classList.add('border-gray-200');
+      } else {
+        monthly.classList.add('border-brand-yellow', 'bg-brand-yellow', 'text-white');
+        monthly.classList.remove('border-gray-200');
+        once.classList.remove('border-brand-yellow', 'bg-brand-yellow', 'text-white');
+        once.classList.add('border-gray-200');
+      }
+    }
+
+    function submitDonation() {
+      const amount = selectedAmount || parseFloat(document.getElementById('custom-amount').value);
+      const firstName = document.getElementById('first-name').value.trim();
+      const lastName = document.getElementById('last-name').value.trim();
+      const email = document.getElementById('donor-email').value.trim();
+      const errorEl = document.getElementById('donate-error');
+      const successEl = document.getElementById('donate-success');
+
+      errorEl.classList.add('hidden');
+      successEl.classList.add('hidden');
+
+      if (!amount || amount <= 0) {
+        errorEl.textContent = 'Please select or enter a donation amount.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      if (!firstName || !lastName) {
+        errorEl.textContent = 'Please enter your full name.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+
+      successEl.classList.remove('hidden');
+      successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</body>
+</html>
