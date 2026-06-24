@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet the team behind BeLight Pro Communitas — our board of directors and staff." />
+  <title>Team — BeLight Pro Communitas</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#F5A623',
+              dark:   '#1A1A1A',
+              light:  '#FFF8EE',
+              muted:  '#6B6B6B',
+            }
+          },
+          fontFamily: {
+            heading: ['Georgia', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Georgia&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="font-body text-brand-dark bg-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-heading font-bold text-brand-yellow">BeLight</a>
+      <ul class="hidden md:flex gap-8 text-sm font-medium text-brand-dark">
+        <li><a href="index.html" class="hover:text-brand-yellow transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-brand-yellow transition">About</a></li>
+        <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+        <li><a href="team.html" class="text-brand-yellow">Team</a></li>
+        <li><a href="gallery.html" class="hover:text-brand-yellow transition">Gallery</a></li>
+        <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+      </ul>
+      <a href="donate.html" class="hidden md:inline-block bg-brand-yellow text-white text-sm font-semibold px-5 py-2 rounded-full hover:opacity-90 transition">Donate</a>
+      <button id="menu-toggle" class="md:hidden text-brand-dark focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand-yellow">Home</a>
+      <a href="about.html" class="hover:text-brand-yellow">About</a>
+      <a href="programs.html" class="hover:text-brand-yellow">Programs</a>
+      <a href="team.html" class="text-brand-yellow">Team</a>
+      <a href="gallery.html" class="hover:text-brand-yellow">Gallery</a>
+      <a href="contact.html" class="hover:text-brand-yellow">Contact</a>
+      <a href="donate.html" class="bg-brand-yellow text-white px-5 py-2 rounded-full text-center">Donate</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="bg-brand-light py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-3">The People Behind the Mission</p>
+      <h1 class="font-heading text-4xl md:text-5xl text-brand-dark max-w-2xl leading-tight">Meet Team BeLight</h1>
+    </div>
+  </section>
+
+  <!-- BOARD OF DIRECTORS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-2">Leadership</p>
+      <h2 class="font-heading text-3xl text-brand-dark mb-12">Board of Directors</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Endalcachew -->
+        <div class="bg-brand-light rounded-2xl p-8 hover:shadow-md transition">
+          <div class="w-20 h-20 bg-brand-yellow rounded-full mb-5 overflow-hidden">
+            <img src="assets/images/team/endalcachew.jpg" alt="Mr. Endalcachew Seyoum Lemma" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          </div>
+          <h3 class="font-semibold text-brand-dark text-lg">Mr. Endalcachew Seyoum Lemma</h3>
+          <p class="text-brand-yellow text-sm font-medium mb-3">Board President</p>
+          <p class="text-brand-muted text-sm leading-relaxed">A seasoned structural engineer and co-founder of BPC. He guides the organization's vision and strategic direction, ensuring Belight remains focused on practical, effective, and mission-driven work.</p>
+        </div>
+
+        <!-- Ephrem -->
+        <div class="bg-brand-light rounded-2xl p-8 hover:shadow-md transition">
+          <div class="w-20 h-20 bg-brand-yellow rounded-full mb-5 overflow-hidden">
+            <img src="assets/images/team/ephrem.jpg" alt="Mr. Ephrem Yoseph Sulito" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          </div>
+          <h3 class="font-semibold text-brand-dark text-lg">Mr. Ephrem Yoseph Sulito</h3>
+          <p class="text-brand-yellow text-sm font-medium mb-3">Board Vice President</p>
+          <p class="text-brand-muted text-sm leading-relaxed">A civil engineer and entrepreneur serving on the Board since 2024. His infrastructure background is especially valuable in Belight's school facility development and economic empowerment work.</p>
+        </div>
+
+        <!-- Alem -->
+        <div class="bg-brand-light rounded-2xl p-8 hover:shadow-md transition">
+          <div class="w-20 h-20 bg-brand-yellow rounded-full mb-5 overflow-hidden">
+            <img src="assets/images/team/alem.jpg" alt="Mrs. Alem Areda Bekele" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          </div>
+          <h3 class="font-semibold text-brand-dark text-lg">Mrs. Alem Areda Bekele</h3>
+          <p class="text-brand-yellow text-sm font-medium mb-3">Board Secretary</p>
+          <p class="text-brand-muted text-sm leading-relaxed">A co-founder and development practitioner with extensive nonprofit experience, including World Vision. Her expertise in child welfare and women's empowerment shapes Belight's governance and programs.</p>
+        </div>
+
+        <!-- Tsion -->
+        <div class="bg-brand-light rounded-2xl p-8 hover:shadow-md transition">
+          <div class="w-20 h-20 bg-brand-yellow rounded-full mb-5 overflow-hidden">
+            <img src="assets/images/team/tsion.jpg" alt="Mrs. Tsion Tadele" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          </div>
+          <h3 class="font-semibold text-brand-dark text-lg">Mrs. Tsion Tadele</h3>
+          <p class="text-brand-yellow text-sm font-medium mb-3">Board Member</p>
+          <p class="text-brand-muted text-sm leading-relaxed">An engineer and nonprofit leader with a strong focus on vulnerable rural communities, children, girls, and women. Guided by her faith, she brings compassion, discipline, and integrity to Belight's board.</p>
+        </div>
+
+        <!-- Elias -->
+        <div class="bg-brand-light rounded-2xl p-8 hover:shadow-md transition">
+          <div class="w-20 h-20 bg-brand-yellow rounded-full mb-5 overflow-hidden">
+            <img src="assets/images/team/elias.jpg" alt="Mr. Elias Fekade Gebremariam" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          </div>
+          <h3 class="font-semibold text-brand-dark text-lg">Mr. Elias Fekade Gebremariam</h3>
+          <p class="text-brand-yellow text-sm font-medium mb-3">Board Member</p>
+          <p class="text-brand-muted text-sm leading-relaxed">With experience in clinical pharmacy and theology, he offers Belight thoughtful guidance grounded in both professional knowledge and community service, shaping programs that respond to real needs.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STAFF -->
+  <section class="py-20 bg-brand-light">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-2">Operations</p>
+      <h2 class="font-heading text-3xl text-brand-dark mb-12">Staff</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Robel -->
+        <div class="bg-white rounded-2xl p-8 hover:shadow-md transition">
+          <div class="w-20 h-20 bg-brand-yellow rounded-full mb-5 overflow-hidden">
+            <img src="assets/images/team/robel.jpg" alt="Mr. Robel Samson Bulto" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          </div>
+          <h3 class="font-semibold text-brand-dark text-lg">Mr. Robel Samson Bulto</h3>
+          <p class="text-brand-yellow text-sm font-medium mb-3">Founder & Executive Director</p>
+          <p class="text-brand-muted text-sm leading-relaxed">A civil engineer with 8+ years in the nonprofit sector, specializing in WASH interventions across rural Ethiopia. As founder, he provides visionary leadership and drives Belight's partnerships and program delivery.</p>
+        </div>
+
+        <!-- Meseret -->
+        <div class="bg-white rounded-2xl p-8 hover:shadow-md transition">
+          <div class="w-20 h-20 bg-brand-yellow rounded-full mb-5 overflow-hidden">
+            <img src="assets/images/team/meseret.jpg" alt="Mrs. Meseret Fitesa Leta" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          </div>
+          <h3 class="font-semibold text-brand-dark text-lg">Mrs. Meseret Fitesa Leta</h3>
+          <p class="text-brand-yellow text-sm font-medium mb-3">Internal Auditor</p>
+          <p class="text-brand-muted text-sm leading-relaxed">Ensures financial controls, compliance, and accountability standards are upheld across the organization's operations and reporting.</p>
+        </div>
+
+        <!-- Bezawit -->
+        <div class="bg-white rounded-2xl p-8 hover:shadow-md transition">
+          <div class="w-20 h-20 bg-brand-yellow rounded-full mb-5 overflow-hidden">
+            <img src="assets/images/team/bezawit.jpg" alt="Mrs. Bezawit Worku Bergena" class="w-full h-full object-cover" onerror="this.style.display='none'" />
+          </div>
+          <h3 class="font-semibold text-brand-dark text-lg">Mrs. Bezawit Worku Bergena</h3>
+          <p class="text-brand-yellow text-sm font-medium mb-3">Finance Officer</p>
+          <p class="text-brand-muted text-sm leading-relaxed">Manages day-to-day financial operations, reporting, and donor fund stewardship in line with BPC's commitment to full transparency and accountability.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-brand-yellow py-20 text-white text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="font-heading text-3xl md:text-4xl mb-4">Want to work with us?</h2>
+      <p class="text-white/80 text-lg mb-8">We are always looking for passionate individuals and partners who share our commitment to community transformation.</p>
+      <a href="contact.html" class="bg-white text-brand-yellow font-bold px-8 py-4 rounded-full hover:bg-brand-light transition">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="text-white font-heading font-bold text-lg mb-2">BeLight Pro Communitas</p>
+        <p class="text-sm leading-relaxed">To be light for the community — a source of hope and positive transformation in Ethiopia.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Quick Links</p>
+        <ul class="text-sm space-y-2">
+          <li><a href="about.html" class="hover:text-brand-yellow transition">About Us</a></li>
+          <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+          <li><a href="team.html" class="hover:text-brand-yellow transition">Team</a></li>
+          <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-brand-yellow transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Contact</p>
+        <ul class="text-sm space-y-2">
+          <li>belightpcngo@gmail.com</li>
+          <li>+251 913 734 566</li>
+          <li>+251 703 405 247</li>
+          <li class="pt-2">
+            <a href="https://www.linkedin.com/company/belight-pro-communitas" target="_blank" rel="noopener" class="hover:text-brand-yellow transition">LinkedIn →</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-700 text-xs text-center">
+      © 2024 BeLight Pro Communitas. Registered under ACSO, Proclamation No. 1113/2019.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
