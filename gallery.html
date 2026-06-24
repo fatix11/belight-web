@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery — BeLight Pro Communitas. Photos from our programs and community work in Ethiopia." />
+  <title>Gallery — BeLight Pro Communitas</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              yellow: '#F5A623',
+              dark:   '#1A1A1A',
+              light:  '#FFF8EE',
+              muted:  '#6B6B6B',
+            }
+          },
+          fontFamily: {
+            heading: ['Georgia', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Georgia&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .gallery-img { cursor: pointer; transition: transform 0.2s, opacity 0.2s; }
+    .gallery-img:hover { transform: scale(1.02); opacity: 0.92; }
+    #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100; align-items: center; justify-content: center; }
+    #lightbox.active { display: flex; }
+    #lightbox img { max-width: 90vw; max-height: 88vh; object-fit: contain; border-radius: 12px; }
+  </style>
+</head>
+<body class="font-body text-brand-dark bg-white">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-xl font-heading font-bold text-brand-yellow">BeLight</a>
+      <ul class="hidden md:flex gap-8 text-sm font-medium text-brand-dark">
+        <li><a href="index.html" class="hover:text-brand-yellow transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-brand-yellow transition">About</a></li>
+        <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+        <li><a href="team.html" class="hover:text-brand-yellow transition">Team</a></li>
+        <li><a href="gallery.html" class="text-brand-yellow">Gallery</a></li>
+        <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+      </ul>
+      <a href="donate.html" class="hidden md:inline-block bg-brand-yellow text-white text-sm font-semibold px-5 py-2 rounded-full hover:opacity-90 transition">Donate</a>
+      <button id="menu-toggle" class="md:hidden text-brand-dark focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4 text-sm font-medium">
+      <a href="index.html" class="hover:text-brand-yellow">Home</a>
+      <a href="about.html" class="hover:text-brand-yellow">About</a>
+      <a href="programs.html" class="hover:text-brand-yellow">Programs</a>
+      <a href="team.html" class="hover:text-brand-yellow">Team</a>
+      <a href="gallery.html" class="text-brand-yellow">Gallery</a>
+      <a href="contact.html" class="hover:text-brand-yellow">Contact</a>
+      <a href="donate.html" class="bg-brand-yellow text-white px-5 py-2 rounded-full text-center">Donate</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="bg-brand-light py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-3">Our Work in Pictures</p>
+      <h1 class="font-heading text-4xl md:text-5xl text-brand-dark leading-tight">Gallery</h1>
+      <p class="text-brand-muted text-lg mt-6 max-w-xl">A glimpse into the communities we serve and the lives we touch across Ethiopia.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+
+        <img src="assets/images/gallery/gallery-1.jpeg" alt="BeLight community program in Ethiopia" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-2.jpeg" alt="BeLight program activities" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-3.jpeg" alt="Community support by BeLight" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-4.jpeg" alt="BeLight Pro Communitas field work" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-5.jpeg" alt="Women empowerment program" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-6.jpeg" alt="BeLight WASH program" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-7.jpeg" alt="Education facility development" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-8.jpeg" alt="Community outreach Ethiopia" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-9.jpeg" alt="BeLight livelihood program" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-10.jpeg" alt="BeLight social protection" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-11.jpeg" alt="BeLight community engagement" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-12.jpeg" alt="BeLight Pro Communitas Ethiopia" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-13.jpeg" alt="BeLight team in the field" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-14.jpeg" alt="Community gathering Ethiopia" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-15.jpeg" alt="BeLight outreach event" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-16.jpeg" alt="Women and children support program" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-17.jpeg" alt="BeLight May 2026 event" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-18.jpeg" alt="Community event Ethiopia" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-19.jpeg" alt="BeLight beneficiaries" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+        <img src="assets/images/gallery/gallery-20.jpeg" alt="BeLight Pro Communitas impact" class="gallery-img w-full rounded-2xl break-inside-avoid" loading="lazy" />
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true">
+    <button id="lightbox-close" class="absolute top-5 right-6 text-white text-3xl font-light hover:text-brand-yellow z-10" aria-label="Close">&times;</button>
+    <button id="lightbox-prev" class="absolute left-4 text-white text-4xl font-light hover:text-brand-yellow z-10" aria-label="Previous">&#8249;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <button id="lightbox-next" class="absolute right-4 text-white text-4xl font-light hover:text-brand-yellow z-10" aria-label="Next">&#8250;</button>
+  </div>
+
+  <!-- CTA -->
+  <section class="bg-brand-yellow py-20 text-white text-center">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="font-heading text-3xl md:text-4xl mb-4">Be part of the story</h2>
+      <p class="text-white/80 text-lg mb-8">Every photo represents a life touched, a community strengthened, a future brightened.</p>
+      <a href="donate.html" class="bg-white text-brand-yellow font-bold px-8 py-4 rounded-full hover:bg-brand-light transition">Support Our Work</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-gray-400 py-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="text-white font-heading font-bold text-lg mb-2">BeLight Pro Communitas</p>
+        <p class="text-sm leading-relaxed">To be light for the community — a source of hope and positive transformation in Ethiopia.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Quick Links</p>
+        <ul class="text-sm space-y-2">
+          <li><a href="about.html" class="hover:text-brand-yellow transition">About Us</a></li>
+          <li><a href="programs.html" class="hover:text-brand-yellow transition">Programs</a></li>
+          <li><a href="team.html" class="hover:text-brand-yellow transition">Team</a></li>
+          <li><a href="contact.html" class="hover:text-brand-yellow transition">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-brand-yellow transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Contact</p>
+        <ul class="text-sm space-y-2">
+          <li>belightpcngo@gmail.com</li>
+          <li>+251 913 734 566</li>
+          <li>+251 703 405 247</li>
+          <li class="pt-2">
+            <a href="https://www.linkedin.com/company/belight-pro-communitas" target="_blank" rel="noopener" class="hover:text-brand-yellow transition">LinkedIn →</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-700 text-xs text-center">
+      © 2024 BeLight Pro Communitas. Registered under ACSO, Proclamation No. 1113/2019.
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    const images = Array.from(document.querySelectorAll('.gallery-img'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let current = 0;
+
+    function openLightbox(index) {
+      current = index;
+      lightboxImg.src = images[current].src;
+      lightboxImg.alt = images[current].alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    images.forEach((img, i) => img.addEventListener('click', () => openLightbox(i)));
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', () => openLightbox((current - 1 + images.length) % images.length));
+    document.getElementById('lightbox-next').addEventListener('click', () => openLightbox((current + 1) % images.length));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') openLightbox((current - 1 + images.length) % images.length);
+      if (e.key === 'ArrowRight') openLightbox((current + 1) % images.length);
+    });
+  </script>
+</body>
+</html>
